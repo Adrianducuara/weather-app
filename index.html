@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación del clima</title>
+    <link rel="stylesheet" href="src/assets/css/styles.css">
+    <link rel="stylesheet" href="src/assets/css/spinner.css">
+</head>
+<body>
+    <section class="container-form">
+        <article class="infor-form">
+            <div class="container-title">
+                <h2>Clima App</h2>
+            </div>
+            <div class="card-info" id="card-info">
+                
+            </div>
+        </article>
+    </section>
+    <br>
+    <section class="container-form">
+        <article class="infor-form" id="form">
+            <div class="container-title">
+                <h2>Clima App</h2>
+            </div>
+            <form>
+                <div class="container-input">
+                    <input type="text" id="city" placeholder="Nombre de la ciudad">
+                </div>
+                <div class="container-input">
+                    <select id="country">
+                        <option value="">-- Pais --</option>
+                        <option value="co">Colombia</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" id="btn-form">Obtener información</button>
+            </form>
+        </article>
+    </section>
+    <script src="src/js/app.js" type="module"></script>
+</body>
+</html>
