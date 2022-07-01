@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', startApp);
 
 function startApp() {
     const cityInput = document.getElementById('city');
-    const countryInput = document.getElementById('country');
+    //const countryInput = document.getElementById('country');
     const form = document.getElementById('form');
     const btn = document.getElementById('btn-form')
     const cardInfo = document.getElementById('card-info');
@@ -18,7 +18,7 @@ function startApp() {
     function dataValidation(e) {
         e.preventDefault();
         weather.cityValue = cityInput.value;
-        weather.countryValue = countryInput.value;
+        //weather.countryValue = countryInput.value;
         
         const valueWeather = Object.values(weather);
 
@@ -31,10 +31,10 @@ function startApp() {
         }
     }
 
-    async function renderInfoWeather({cityValue, countryValue}) {
+    async function renderInfoWeather({ cityValue }) {
         try {
             btn.textContent = 'Obteniendo información...'
-            const fullData = await getDataWeather(cityValue, countryValue);
+            const fullData = await getDataWeather(cityValue);
             btn.textContent = 'Pronostico';
             console.log(fullData);
             const currentWeather = fullData.current;
