@@ -37,7 +37,9 @@ function startApp() {
         try {
             btn.textContent = 'Obteniendo información...'
             const fullData = await getDataWeather(cityValue, countryValue);
-            btn.textContent = 'Obtener información'
+            btn.textContent = 'Pronostico';
+
+            console.log(fullData);
 
             const currentWeather = fullData.current;
             const currentLocation = fullData.location;
